@@ -90,7 +90,8 @@ After running via either method, the application will be available at:
 ## 👨‍💻 Author Details
 
 -   **Name:** Kareem Khaled
--   **Email:** (Kareemalsayes8@gmail.com)
+-   **Email:**
+-   Kareemalsayes8@gmail.com
 -   **GitHub:** [@kareemkhaled12](https://github.com/kareemkhaled12)
 -   **Docker Hub:** [@kreemkhaled](https://hub.docker.com/u/kreemkhaled)
 
