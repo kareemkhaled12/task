@@ -1,51 +1,97 @@
-# 📦 Go Docker Assignment
+# 🔷 Go Web App (Dockerized)
 
-A simple Go (Golang) web application built and containerized with Docker.
-Submitted for the Distributed Systems course.
-
----
-
-## 🔗 Submission Link (Docker Hub)
-
-Here is the public Docker Hub image URL as required for the assignment:
-
-[https://hub.docker.com/r/kreemkhaled/go-app](https://hub.docker.com/r/kreemkhaled/go-app)
+A simple Go web application containerized with Docker for the Distributed Systems course (Assignment 03).
 
 ---
 
-## ⚡️ Quick Start: Running the App
+## ✅ Assignment Submission: Docker Image
 
-Follow these steps to run the container directly from Docker Hub.
+The public Docker Hub image link required for this assignment is:
 
-1. Pull the Docker Image:
-```bash
-docker pull kreemkhaled/go-app
+🔗 **[https://hub.docker.com/r/kreemkhaled/go-app](https://hub.docker.com/r/kreemkhaled/go-app)**
 
-2. Run the Container:
-docker run -d -p 8080:8080 --name go-web-app kreemkhaled/go-app
+---
 
-(Using -d to run it in detached mode).
-3. View the App:
-Open your browser to http://localhost:8080.
-4. (Optional) Stop and Remove the Container:
-docker stop go-web-app
-docker rm go-web-app
+## 🚦 How to Run the Application
 
-🛠 Building from the Source Code
-If you wish to build the image locally instead of pulling from Docker Hub.
-1. Clone the GitHub Repository:
-git clone [https://github.com/kareemkhaled12/task.git](https://github.com/kareemkhaled12/task.git)
-cd task
+There are two main ways to run this project.
 
-2. Build the image using the Dockerfile:
-docker build -t local-go-app .
+### Method 1: Pull from Docker Hub (Recommended)
 
-3. Run the locally-built image:
-docker run -d -p 8080:8080 --name local-go-web-app local-go-app
+This runs the pre-built image directly from Docker Hub.
 
-...and check http://localhost:8080.
-👤 Author Info
- * Kareem Khaled
- * GitHub: kareemkhaled12
- * Docker Hub: kreemkhaled
-<!-- end list -->
+1.  **Pull the image:**
+    ```bash
+    docker pull kreemkhaled/go-app
+    ```
+
+2.  **Run the container:**
+    ```bash
+    docker run -p 8080:8080 kreemkhaled/go-app
+    ```
+
+---
+
+### Method 2: Build Locally from Source
+
+This method clones the repository and builds the image on your machine.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/kareemkhaled12/task.git](https://github.com/kareemkhaled12/task.git)
+    cd task
+    ```
+
+2.  **Build the Docker image:**
+    ```bash
+    docker build -t kareem-local-build .
+    ```
+
+3.  **Run the local container:**
+    ```bash
+    docker run -p 8080:8080 kareem-local-build
+    ```
+
+---
+
+After running via either method, the application will be available at:
+**🔗 [http://localhost:8080](http://localhost:8080)**
+
+---
+
+## 📂 Project Files
+
+-   `main.go`: The core Go web server.
+-   `Dockerfile`: Docker build instructions.
+-   `go.mod` / `go.sum`: Go dependency files.
+-   `README.md`: This documentation file.
+
+---
+
+## 🛠️ (Developer) Publishing Steps
+*These are the steps used to publish the image.*
+
+1.  **Login:**
+    ```bash
+    docker login
+    ```
+2.  **Tag:**
+    *(Tag the local build, e.g., 'kareem-local-build')*
+    ```bash
+    docker tag kareem-local-build kreemkhaled/go-app
+    ```
+3.  **Push:**
+    ```bash
+    docker push kreemkhaled/go-app
+    ```
+
+---
+
+## 👨‍💻 Author Details
+
+-   **Name:** Kareem Khaled
+-   **Email:** `Kareemalsayes8@gmail.com`
+-   **GitHub:** [@kareemkhaled12](https://github.com/kareemkhaled12)
+-   **Docker Hub:** [@kreemkhaled](https://hub.docker.com/u/kreemkhaled)
+
+⭐ *Don't forget to star the repo if you found this helpful!*
